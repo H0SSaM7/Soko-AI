@@ -1,0 +1,164 @@
+class AppStrings {
+  static const String storeName = "app_name";
+  static const String wellcome = "wellcome";
+  static const String inTheLargestComplextOfEntertainmentCenter =
+      "in_the_largest_complext_of_entertainment_center";
+  static const String user = "user";
+  static const String skip = "skip";
+  static const String vendor = "vendor";
+  static const String phoneNum = "phone_num";
+  static const String password = "password";
+  static const String forgotYourPassword = "forgot_your_password";
+  static const String signIn = "sign_in";
+  static const String noAccount = "no_account";
+  static const String sighUp = "sigh_up";
+  static const String accountSignUp = "account_sign_up";
+  static const String accountSignIn = "account_sign_in";
+  static const String email = "email";
+  static const String resetPassword = "reset_password";
+  static const String enterTheEmailAssociatedWithYourAccount =
+      "enter_theemail_associated_with_your_account";
+  static const String enterThePhoneAssociatedWithYourAccount =
+      "enter_thephone_associated_with_your_account";
+  static const String send = "send";
+  static const String verificationCode = "verification_code";
+  static const String weSentYouThe4DigitCodeTo =
+      "we_sent_you_the_4_digit_code_to";
+  static const String enterTheCodeBelowToConfirmYourPhoneNumber =
+      "enter_the_code_below_to_confirm_your_phone_number";
+  static const String verify = "verify ";
+  static const String ifYouDidntReceiveACode = "if_you_didnt_receive_a_code";
+  static const String resend = "resend";
+  static const String orSignInWith = "or_sign_in_with";
+  static const String newPass = "new_pass ";
+  static const String mustBeAtleast8Characters = "must_be_atleast8_characters ";
+  static const String confirmPass = "confirm_pass";
+  static const String bothPassMustMatch = "both_pass_must_match ";
+
+  static const String setPass = "set_pass";
+  static const String userName = "user_name";
+  static const String byClickingThisItMeansThatYouAreAgreeTo =
+      "by_clicking_this_it_means_that_you_are_agree_to";
+  static const String termsConditions = "terms_conditions";
+  static const String and = "and";
+  static const String privacyPolicy = "privacy_policy";
+  static const String alreadyAMember = "already_amember";
+  static const String searchForLocation = "search_for_location";
+  static const String confirmLocation = "confirm_location";
+  static const String hintedSearchText = "hinted_search_text";
+  static const String offers = "offers";
+  static const String entertainmentCenters = "entertainment_centers";
+  static const String theEntertainmentCenters = "the_entertainment_centers";
+  static const String entertainmentCenter = "entertainment_center";
+  static const String specialOffer = "special_offer";
+  static const String whatTheCenterProvides = "what_the_center_provides";
+  static const String ourServices = "our_services";
+  static const String theOffers = "the_offers";
+  static const String theBranches = "the_branches";
+  static const String theLocation = "the_location";
+  static const String timesOfWork = "times_of_work";
+  static const String learnMore = "learn_more";
+  static const String chargeYourCard = "charge_your_card";
+  static const String yourAddress = "your_address";
+  static const String aboutUs = "about_us";
+  static const String contactUs = "contact_us";
+  static const String logOut = "log_out";
+  static const String editProfile = "edit_profile";
+  static const String cancel = "cancel";
+  static const String chooseYourAvatar = "choose_your_avatar";
+  static const String save = "save";
+  static const String savedAddress = "saved_address";
+  static const String addAddress = "add_address";
+  static const String stName = "st_name";
+  static const String buldingNo = "bulding_no";
+  static const String floorNo = "floor_no";
+  static const String apartmentNo = "apartment_no";
+  static const String add = "add";
+  static const String removeAddress = "remove_address";
+  static const String areYouSureYouWantToRemoveThisAddress =
+      "are_you_sure_you_want_to_remove_this_address";
+  static const String yes = "yes";
+  static const String edit = "edit";
+  static const String editAddress = "edit_address";
+  static const String cardCharging = "card_charging";
+  static const String andEnjoyTheBestOffers = "and_enjoy_the_best_offers";
+  static const String areYouSureYouWantToLogOutRromYourAccount =
+      "are_you_sure_you_want_to_log_outfrom_your_account";
+  static const String pleaseChooseHowToContactUs =
+      "please_choose_how_to_contact_us";
+  static const String filter = "filter";
+  static const String pricing = "pricing";
+  static const String rating = "rating";
+  static const String distance = "distance";
+  static const String nearBy = "near_by";
+  static const String search = "search";
+  static const String highToLow = "high_to_low";
+  static const String lowToHigh = "low_to_high";
+  static const String yourServices = "your_services";
+  static const String cardDetails = "card_details";
+  static const String cardNumber = "card_number";
+  static const String cardName = "card_name";
+  static const String expirationDate = "expiration_date";
+  static const String payment = "payment";
+  static const String timeAndDate = "time_and_date";
+  static const String paymentMethod = "payment_method";
+  static const String summary = "summary";
+  static const String totalAamount = "total_amount";
+  static const String confirmBooking = "confirm_booking";
+  static const String yourCode = "your_code";
+  static const String yourBookingIisConfirmed = "your_booking_is_confirmed";
+  static const String thankYou = "thank_you";
+  static const String theNotifications = "the_notifications";
+  static const String rate = "rate";
+  static const String addYourCommentHere = "add_your_comment_here";
+  static const String rateFood = "rate_food";
+  static const String rateService = "rate_service";
+  static const String address = "address";
+  static const String pleaseChooseServiceYouProvide =
+      "please_choose_service_you_provide";
+  static const String continue_ = "continue";
+  static const String entertainmentCenterDetails =
+      "entertainment_center_details";
+  static const String centerName = "center_name";
+  static const String entering = "entering";
+
+  static const String openingDate = "opening_date";
+  static const String closingDate = "closing_date";
+  static const String individualNum = "individual_num";
+  static const String thePrice = "the_price";
+  static const String detailsAboutTheCenter = "details_about_the_center";
+  static const String enterCenterDetails = "enter_center_details";
+  static const String morningBookingDates = "morning_booking_dates";
+  static const String eveningBookingDates = "evening_booking_dates";
+  static const String addAnotherLocation = "add_another_location";
+  static const String chooseAnotherLocation = "choose_another_location";
+  static const String uploadCenterPics = "upload_center_pics";
+  static const String addPhotographyPackage = "add_photography_package";
+  static const String views = "views";
+  static const String likes = "likes";
+  static const String tel = "tel";
+  static const String suggestedPrice = "suggested_price";
+  static const String approvalOfRequest = "approval_of_request";
+  static const String rejectionOfRequest = "rejection_of_request";
+  static const String editThePrice = "edit_the_price";
+  static const String hello = "hello";
+  static const String addSpecialOrder = "add_special_order";
+  static const String addPriceHere = "add_price_here";
+  static const String addAnyNotes = "add_any_notes";
+  static const String addYourNotesHere = "add_your_notes_here";
+  static const String from = "from";
+  static const String to = "to";
+  static const String orderDetails = "order_details";
+  static const String theOrders = "the_orders";
+  static const String thePervious = "the_pervious";
+  static const String theCurrent = "the_current";
+  static const String theDistance = "the_distance";
+  static const String expiredAt = "expired_at";
+  static const String workingTime = "working_time";
+  static const String orderId = "order_id";
+  static const String theBalance = "the_balance";
+  static const String scanThisCodeThrough = "scan_this_code_through";
+  static const String addOffer = "add_offer";
+  static const String detailsAboutTheOffer = "details_about_the_Offer";
+  static const String offerName = "offer_name";
+}
