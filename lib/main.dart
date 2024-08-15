@@ -3,8 +3,6 @@ import 'dart:io';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_generative_ai/google_generative_ai.dart';
-import 'package:sokoai/app/app_constants.dart';
 
 import 'app/my_app.dart';
 import 'presentation/resources/constants_manager.dart';
@@ -20,10 +18,6 @@ void main() async {
   ]);
   await Future.delayed(const Duration(milliseconds: 300));
 
-// Access your API key as an environment variable (see "Set up your API key" above)
-  final model =
-      GenerativeModel(model: 'gemini-1.5-flash', apiKey: AppConstants.apiKey);
-
   runApp(
     EasyLocalization(
       supportedLocales: const [
@@ -31,8 +25,8 @@ void main() async {
         ConstantsManager.arLocale
       ],
       path: 'assets/translation',
-      fallbackLocale: ConstantsManager.arLocale,
-      startLocale: ConstantsManager.arLocale,
+      fallbackLocale: ConstantsManager.enLocale,
+      startLocale: ConstantsManager.enLocale,
       child: const MyApp(),
     ),
   );

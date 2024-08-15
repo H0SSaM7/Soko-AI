@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../splash/splash_view.dart';
+import '../chat/chat_view.dart';
 
 class Routes {
-  static const String splash = '/';
+  static const String splashRoute = '/';
+  static const String chatRoute = '/';
 }
 
 class AppNavigation {
   AppNavigation._();
 
-  static final GoRouter router = GoRouter(
-      initialLocation: Routes.splash,
-      debugLogDiagnostics: true,
-      routes: [
-        GoRoute(
-          path: Routes.splash,
-          builder: (context, state) {
-            return const SplashView();
-          },
-        ),
-      ]);
+  static final GoRouter router =
+      GoRouter(initialLocation: Routes.chatRoute, routes: [
+    GoRoute(
+      path: Routes.chatRoute,
+      builder: (context, state) {
+        return const ChatView();
+      },
+    ),
+  ]);
 }
 
 CustomTransitionPage buildPageWithTransition<T>({

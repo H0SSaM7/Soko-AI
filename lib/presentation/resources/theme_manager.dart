@@ -58,8 +58,7 @@ InputDecorationTheme _inputDecorationTheme() {
       color: ColorManager.lightGray,
       fontSize: FontSize.s14,
     ),
-    contentPadding:
-        EdgeInsets.fromLTRB(0.0, AppHeight.s12, AppWidth.s16, AppHeight.s12),
+    contentPadding: EdgeInsets.all(AppSize.s12),
     fillColor: Colors.transparent,
     isDense: true,
     filled: true,
