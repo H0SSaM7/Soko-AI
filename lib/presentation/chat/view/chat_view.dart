@@ -3,11 +3,9 @@ import 'dart:developer';
 import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:sokoai/app/di.dart';
 import 'package:sokoai/presentation/resources/values_manager.dart';
 
-import '../../../app/app_constants.dart';
 import '../viewModel/chat_bloc.dart';
 
 class ChatView extends StatefulWidget {
@@ -19,6 +17,7 @@ class ChatView extends StatefulWidget {
 
 class _ChatViewState extends State<ChatView> {
   late final TextEditingController controller;
+  final GlobalKey<ScaffoldState> homekey = GlobalKey();
   @override
   void initState() {
     controller = TextEditingController();
@@ -30,7 +29,15 @@ class _ChatViewState extends State<ChatView> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => ChatBloc(getIt()),
-      child: BlocBuilder<ChatBloc, ChatState>(
+      child: BlocConsumer<ChatBloc, ChatState>(
+        listener: (context, state) {
+          if (state is ChatError) {
+            log(state.err);
+
+            final snackbar = SnackBar(content: Text(state.err));
+            ScaffoldMessenger.of(context).showSnackBar(snackbar);
+          }
+        },
         builder: (context, state) {
           return Scaffold(
             body: Padding(
@@ -39,14 +46,21 @@ class _ChatViewState extends State<ChatView> {
               child: Column(
                 children: [
                   Expanded(
-                    child: DashChat(
-                      typingUsers:
-                          state is ChatLoading ? state.typingUsers : [],
-                      readOnly: true,
-                      currentUser: ChatUser(id: '0', firstName: 'Me'),
-                      onSend: (ChatMessage m) {},
-                      messages: state.messages,
-                    ),
+                    child: state.messages.isEmpty
+                        ? const Center(
+                            child: Text(
+                              'My name is Soko AI\n What is going on in your mind?',
+                              textAlign: TextAlign.center,
+                            ),
+                          )
+                        : DashChat(
+                            typingUsers:
+                                state is ChatLoading ? state.typingUsers : [],
+                            currentUser: ChatUser(id: '0', firstName: 'Me'),
+                            onSend: (ChatMessage m) {},
+                            messages: state.messages,
+                            readOnly: true,
+                          ),
                   ),
                   SizedBox(height: AppHeight.s16),
                   Row(
@@ -56,18 +70,25 @@ class _ChatViewState extends State<ChatView> {
                           controller: controller,
                         ),
                       ),
+                      SizedBox(width: AppWidth.s10),
+                      InkWell(
+                        onTap: () => context.read<ChatBloc>().add(PickImage()),
+                        child: const Icon(Icons.image),
+                      ),
                       ElevatedButton(
                         onPressed: () {
-                          // getAiResponse();
                           context
                               .read<ChatBloc>()
                               .add(SendMessage(input: controller.text));
                           controller.clear();
                         },
-                        child: Icon(Icons.send),
                         style: ElevatedButton.styleFrom(
                             shape: const CircleBorder(),
-                            minimumSize: Size(AppWidth.s40, AppHeight.s40)),
+                            minimumSize: Size(AppWidth.s35, AppHeight.s35)),
+                        child: Icon(
+                          Icons.send,
+                          size: AppSize.s18,
+                        ),
                       )
                     ],
                   )

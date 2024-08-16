@@ -8,3 +8,14 @@ final class SendMessage extends ChatEvent {
 
   SendMessage({required this.input});
 }
+
+final class SendMessageWithImage extends ChatEvent {
+  final String input;
+  final String image;
+  SendMessageWithImage({
+    required this.input,
+    required this.image,
+  });
+}
+
+final class PickImage extends ChatEvent {}

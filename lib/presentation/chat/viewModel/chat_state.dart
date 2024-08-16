@@ -17,7 +17,7 @@ final class ChatLoading extends ChatState {
 
   @override
   List<ChatMessage> get messages => currentMessages;
-  @override
+
   const ChatLoading(
     this.currentMessages,
     this.typingUsers,
@@ -29,10 +29,18 @@ final class ChatLoaded extends ChatState {
 
   @override
   List<ChatMessage> get messages => loadedMessages;
-  @override
+
   const ChatLoaded(
     this.loadedMessages,
   );
 }
 
-final class ChatError extends ChatState {}
+final class ChatError extends ChatState {
+  final String err;
+  final List<ChatMessage> currentMessages;
+
+  @override
+  List<ChatMessage> get messages => currentMessages;
+
+  const ChatError(this.currentMessages, this.err);
+}

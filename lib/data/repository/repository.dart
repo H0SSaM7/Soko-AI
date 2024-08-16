@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:sokoai/data/dataSource/remote_data_source.dart';
@@ -24,6 +26,7 @@ class RepositoryImple extends Repository {
       final content = await _dataSource.getContent(contents);
       return Right(content);
     } catch (e) {
+      log(e.toString());
       return Left(DataSource.unknown.toFailture());
     }
   }
