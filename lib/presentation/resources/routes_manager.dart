@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../chat/chat_view.dart';
+import '../chat/view/chat_view.dart';
 
 class Routes {
   static const String splashRoute = '/';
