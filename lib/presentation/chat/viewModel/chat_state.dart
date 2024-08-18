@@ -44,3 +44,36 @@ final class ChatError extends ChatState {
 
   const ChatError(this.currentMessages, this.err);
 }
+
+// final class ChatSpeechLoading extends ChatState {
+//   final List<ChatMessage> currentMessages;
+
+//   @override
+//   List<ChatMessage> get messages => currentMessages;
+
+//   const ChatSpeechLoading(
+//     this.currentMessages,
+//   );
+// }
+
+// final class ChatSpeechLoaded extends ChatState {
+//   final List<ChatMessage> currentMessages;
+
+//   @override
+//   List<ChatMessage> get messages => currentMessages;
+
+//   const ChatSpeechLoaded(
+//     this.currentMessages,
+//   );
+// }
+
+// final class ChatSpeechError extends ChatState {
+//   final List<ChatMessage> currentMessages;
+
+//   @override
+//   List<ChatMessage> get messages => currentMessages;
+
+//   const ChatSpeechError(
+//     this.currentMessages,
+//   );
+// }

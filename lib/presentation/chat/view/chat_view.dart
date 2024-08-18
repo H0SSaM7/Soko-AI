@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sokoai/app/di.dart';
 import 'package:sokoai/presentation/resources/values_manager.dart';
+import 'package:typewritertext/typewritertext.dart';
 
 import '../viewModel/chat_bloc.dart';
 
@@ -47,10 +48,11 @@ class _ChatViewState extends State<ChatView> {
                 children: [
                   Expanded(
                     child: state.messages.isEmpty
-                        ? const Center(
-                            child: Text(
-                              'My name is Soko AI\n What is going on in your mind?',
+                        ? Center(
+                            child: TypeWriter.text(
+                              'My name is Soko AI and I\'m here to help you. \n What is going on in your mind?',
                               textAlign: TextAlign.center,
+                              duration: const Duration(milliseconds: 50),
                             ),
                           )
                         : DashChat(
